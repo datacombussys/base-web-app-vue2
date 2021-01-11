@@ -1,0 +1,61 @@
+
+$accent: rgb(224, 108, 0);
+$base-text-color: #fff;
+$base-bg: #363640;
+$base-border-color: #515159;
+$base-accent: rgb(199, 49, 3);
+$border-radius: 4px;
+$base-header-color: rgba(41, 80, 83, 0.3);
+
+$base-font-size: 1.05rem;
+$base-line-height: 1.35em;
+
+$datacom-color: #044D64;
+$datacom-gradient: linear-gradient(90deg, #013136, #014F56);
+$icon-base-color: rgb(4, 77, 87);
+$content-vh: calc(100vh - 155px);
+
+//Vuetify Colors
+$primary-color: #026379;
+$secondary-color: rgb(199, 49, 3);
+$accent-color: #06BFEA;
+$error-color: #F62F2F;
+$danger-color: rgb(192, 2, 2);
+$info-color: #2196F3;
+$success-color: #0B9C11;
+$warning-color: #F9BC04;
+$teal-color: rgb(5, 170, 170);
+$dark-teal-color: rgb(3, 102, 102);
+
+//Vuetify Settings
+// $body-font-family: 'Work Sans', serif; 
+// $border-radius-root: 6px; 
+// $font-size-root: 28px;
+
+$body-font-family: 'PT Sans', sans-serif;
+$heading-font-family: 'Work Sans', sans-serif;
+
+$headings: (
+  'h4': (
+    'letter-spacing': 0.1875rem,
+    'weight': 900
+  ),
+  'h5': (
+    'letter-spacing': 0.1875rem,
+    'weight': 700
+  ),
+  'h6': (
+    'letter-spacing': 0.1875rem,
+    'size': 1rem,
+    'weight': 700
+  ),
+  'subtitle-1': (
+    'letter-spacing': 0.1875rem,
+  ),
+  'subtitle-2': (
+    'letter-spacing': 0.1875rem,
+  ),
+  'body-1': (
+    'size': .9375rem,
+  )
+);

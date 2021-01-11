@@ -1,0 +1,85 @@
+Delivered-To: datacombussys@gmail.com
+Received: by 2002:a02:c81a:0:0:0:0:0 with SMTP id p26csp2306557jao;
+        Tue, 3 Mar 2020 16:22:20 -0800 (PST)
+X-Received: by 2002:aca:524a:: with SMTP id g71mr62827oib.7.1583281340762;
+        Tue, 03 Mar 2020 16:22:20 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1583281340; cv=none;
+        d=google.com; s=arc-20160816;
+        b=LzveglYsEQ7/Idz56aINVFXqtRWO4wa7Yl5CdTEXb13VagUm7S6tiXHeCyY8OCMg+R
+         FcZGJisES/63aXsSFbit8d7ks8hkk/zuDFZPXl1wjUJ533V2HCqbbcYBHYwuzz/xxL7r
+         UshrMYFPvNJUsMUW2vU3a5efXOM8hiib55LvMrf5VVWdT7zekZInxMpimvWxX8Ikz3it
+         fF6gMiBUH2f0ZbanxPyvBCORaNjrnyYu/2hI7mYHVP23Z884g20yy/zlyHXMnMI9ITFf
+         lneYnqnRYnygTi0mqWLsb0AtohuvMFCOPmiP/1ygXYbqMOLHvZgsNXyt29pObVw+Elg+
+         jW6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=PzS/4TWd3XyIgzz3wInLdgyodj01VUxOp9fWwOxsh44=;
+        b=ZJQLLZTPWdnqURRteHZ+28VxklrT0hgxCTdfCfsKaGkYqpd5QoRnAjo/epqmPakEJH
+         POqBBAF/G8Ey4jAG934ZX2Dzkj8SdBTzXWssjElM9NAEL8+xtrzCdTUuF8WDDYVvBngP
+         rJ1HsbV9IEZNy9G2+7rfgg/jnfGRf/KeVNp1DpK3mWym0kPBjRwHg63bIiMjZggsRhEk
+         LRGW2ctzyaYMOx8uaNJu4mMFOSwADMVW+01Tfz3OYKTp8ITs0IwVfF0Ns78KpFLZClIp
+         qCrpsgHgSUaoNHZL1J9duR+49ya0rtHxMG/zTTTD5STt/iQDiO21dlm+eRI4H5swpjEQ
+         xLww==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=NnnU5j2u;
+       spf=pass (google.com: domain of ian.c.christensen@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ian.c.christensen@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ian.c.christensen@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id h83sor308867oif.17.2020.03.03.16.22.20
+        for <datacombussys@gmail.com>
+        (Google Transport Security);
+        Tue, 03 Mar 2020 16:22:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of ian.c.christensen@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=NnnU5j2u;
+       spf=pass (google.com: domain of ian.c.christensen@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=ian.c.christensen@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=PzS/4TWd3XyIgzz3wInLdgyodj01VUxOp9fWwOxsh44=;
+        b=NnnU5j2uE2zj9Kf5Yx1OnEWOrHfaxufGhJEFuBJR9ysaYV6nCVXYm+ah10kPL4xRTI
+         wGR7Z+4HFpEAfcgPuxSIIrsGCLysUAaQ0rxF7owDueFZARmQEVFQHjJ+lf9ho5QFoejz
+         nn1/uloabi1kLcNn2Un8nYP4T+daq8Dpbd0JsK+GOReeBooiZlJiof6I/xBIMf309++c
+         zFAWEz5gTk7DcoW2fdvo4CLtOlukgve5LznU2JO/ghzanXCliCFHOb8225fgLN7Qrx5B
+         MKTm053I6suNiH7sXzLHB2f947xbAzSqGz6aIb+o6cmBQAFpCzdo4NB/qg6rdSmE4+fq
+         II0A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=PzS/4TWd3XyIgzz3wInLdgyodj01VUxOp9fWwOxsh44=;
+        b=m9FRYjg1kqheEsyUQoeIs+89ZoCo7DCNPjoYMW90+gbPBBCCOdg1yZPNDoy5DeM/4N
+         gdhnlCz5ym8MC2FeAmTfPlxcuE6U3HV+2R11uQlQdCCOtsYJRO2SWfdIA3wFqpw1bAmc
+         n7Z1oiC2ToCU4G8PLuMPr4oACzBRSsO1rPEe3JGoutfb3jf6KOl+KZYAd/WZdy/sHk12
+         Ag4s7qZJqCtYEiKVKiRvWrryTu/5AjQa5+FYDjO+2j1ZhpJ99DIAypzWwB/qjUwdQ6JZ
+         b4aauTRAx/cN0r3jdyW9C28cl2DmVJTsxOHq5DpEFuhceWIoMuKjITL15IhZXF22Zg61
+         cD4Q==
+X-Gm-Message-State: ANhLgQ163OJeUTTObb6fVT1JWlRoF+Q1kibJJW+7xy1S4rzwPOEIbRGL
+	Sa3io5GZUX2outDnjDE/xavx7XY4yuAmkJPU7XGq
+X-Google-Smtp-Source: ADFU+vuOw0N3ut8HMTgjSI2Rd+GonwzAPhZRtLE4SgrqFdypmcggvbh1DX5OeSL1x1zSjvSkOT3ncgERI1lBKLqC8kA=
+X-Received: by 2002:a54:4816:: with SMTP id j22mr45377oij.179.1583281340203;
+ Tue, 03 Mar 2020 16:22:20 -0800 (PST)
+MIME-Version: 1.0
+From: Ian Christensen <ian.c.christensen@gmail.com>
+Date: Tue, 3 Mar 2020 17:22:08 -0700
+Message-ID: <CAC0mjV9HTSHjSTPNzXVQWfM3jbYGUMJqiM77tkNqmJg3gLb-oQ@mail.gmail.com>
+Subject: My First Test Email
+To: datacombussys@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000dcc9ea059ffc6906"
+
+--000000000000dcc9ea059ffc6906
+Content-Type: text/plain; charset="UTF-8"
+
+Hello there.
+
+This email is the first of millions of emails that are going to hit this
+account.
+Unfortunately, 99.9999% of them are going to be spam.
+
+--000000000000dcc9ea059ffc6906
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Hello there.<div><br></div><div>This email is the first of millions of emails that are going to hit this account.</div><div>Unfortunately, 99.9999% of them are going to be spam.</div><div><br></div><div><br></div></div>
+
+--000000000000dcc9ea059ffc6906--

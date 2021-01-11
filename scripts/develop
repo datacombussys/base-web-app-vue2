@@ -1,0 +1,100 @@
+#!/usr/bin/env node
+
+const { spawn } = require("child_process");
+const BASE_DIR = __dirname + "/..";
+
+console.log(BASE_DIR);
+
+// function startCMS() {
+//   let child = spawn("npm", ["run", "dev"], {
+//     cwd: BASE_DIR + "/cms"
+//   });
+
+//   console.log("webpack started on port 9030");
+
+//   child.stdout.on("data", function(data) {
+//     console.log(data.toString());
+//   });
+
+//   child.stderr.on("data", function(data) {
+//     console.error(data.toString());
+//   });
+
+//   child.on("exit", function(code) {
+//     console.error("Webpack failed, stopping development server");
+//     console.error("Webpack exited with code: " + code.toString());
+//     process.exit(1);
+//   });
+// }
+
+function nodeServer() {
+  let child = spawn("npm", ["run", "start"], {
+    cwd: BASE_DIR + "/node"
+  });
+
+  console.log("Node started on port 9020");
+
+  child.stdout.on("data", function(data) {
+    console.log(data.toString());
+  });
+
+  child.stderr.on("data", function(data) {
+    console.error(data.toString());
+  });
+
+  child.on("exit", function(code) {
+    console.error("Node failed, stopping development server");
+    console.error("Node exited with code: " + code.toString());
+    process.exit(1);
+  });
+}
+
+function startDjango() {
+  let child = spawn("manage.py", ["runserver", "9010"], {
+    cwd: BASE_DIR + "/backend"
+  });
+
+  console.log("django started on port 9010");
+
+  child.stdout.on("data", function(data) {
+    console.log(data.toString());
+  });
+
+  child.stderr.on("data", function(data) {
+    console.error(data.toString());
+  });
+
+  child.on("exit", function(code) {
+    console.error("Django failed, stopping development server");
+    console.error("Django exited with code: " + code.toString());
+    process.exit(1);
+  });
+}
+
+function startWebPack() {
+  let child = spawn("npm", ["run", "serve"], {
+    cwd: BASE_DIR + "/frontend"
+  });
+
+  console.log("webpack started on port 9000");
+
+  child.stdout.on("data", function(data) {
+    console.log(data.toString());
+  });
+
+  child.stderr.on("data", function(data) {
+    console.error(data.toString());
+  });
+
+  child.on("exit", function(code) {
+    console.error("Webpack failed, stopping development server");
+    console.error("Webpack exited with code: " + code.toString());
+    process.exit(1);
+  });
+}
+
+
+startDjango();
+nodeServer();
+startWebPack();
+// startCMS();

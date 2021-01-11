@@ -1,0 +1,32 @@
+{
+  "name": "node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.6",
+    "aws-sdk": "^2.714.0",
+    "base64-to-image": "^1.0.2",
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.2",
+    "express": "~4.16.1",
+    "express-handlebars": "^5.1.0",
+    "http-errors": "~1.6.3",
+    "imap": "^0.8.19",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.10",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "poplib": "^0.1.7",
+    "sharp": "^0.24.1",
+    "socket.io": "^2.3.0",
+    "uuid": "^3.4.0",
+    "xoauth2": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

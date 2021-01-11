@@ -1,0 +1,8 @@
+# python virtual environment 
+env/
+
+# Development data base
+*.sqlite3
+
+#Directories
+node_modules/

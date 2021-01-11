@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "datacom-business-1552403590073",
+  "private_key_id": "20adfae3151385279fe88a41a095b33fff5850e1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDFV0uawOeQcba3\nTTY4DSlQzv5TIFPUspmciV6+tRiTJAbAkwgMf8We/qX+1XTqa6PwXBhK+t2nRU4L\nuJIRr1yy1O8lIeF5v6WQTlry4nrLUEHohzuEMp18Aqiqg1qKpbBp7QE6uTsSL804\n6xAtQkxxEVOGeZcxN7XXkox76uKfsPdiq8ez+l1Yw1dvghz3ZZAqCaa81oTYJ/qT\nD2qreixEXwFcH5mU/IN9XzMh3JG7NYxLFslDy5wzBExMiDOn67vd73WHMlBeImt4\nEgq7p/9g8nRzpXKgX8MEG/Kzp8iCAhJrIM397M+8d7kIaXU3Wy75AxlLQy3uiY+N\nbRYaaiV1AgMBAAECggEAAweNv3pYc7hTLxA0r2EAWKwjOmDdXv8/UKhi0UTgpwDS\ne7by7i79+F/KnS8At8j5DNHh65coIcIntxImNLaykrcMu5vmce+8jNd75o1BVLxO\nlR4r9NUXSgj7NuO3JAUnWd2+4ZYByQv9atmTXeaBKIRoE43rtMbSq1Slt6p884+e\n7JMDkcS9jypOcRMk/RdWv9Ku5AfqRjFaJBIcrAepZkZ38tf5zmNQ38SNDGsP9ydJ\nllqzdWFpBYqUJFnSUpyesxsin0MdGu+uJxTqsLQw4pmcOChzHGsfo1SQgST7QX37\nnDL0cXaFxNxUazM481nFDD6s3AXfVeAIsFlo4SbD1wKBgQDpw0289Oa77otBBY+5\nrSFZaZnL7qOGm8T2PVAbVh8Aud435xgbYQxpLselQu6tkBXRVf83MP4SBbpQ52hL\neH1DM3Zrdq8EGiKDWUkjhREfy2V5JS/OaVkoXHna+nFtgVUj8QfsZ3ge0hVKXARY\niBsnpoq1GNE6FXD+PvpAPWU0owKBgQDYHQeLRcDghDt+0Y+/aqaSuAgp6OOnq7N2\n+7xSbVEJGtWDEuHsfWQxCIlABIIphuPMJb7XY8axzohTc7A2Ca+h7kY4CzyYW7fG\nCK5YkIQZEPWHg+1KbawiL3t1aK7jKhb8HrVbG4Pso4VmEMOgZMSfLEWTuncATcsl\n9Yt77QnHBwKBgBzDa01U1Q9Kyte1V3oBU5ks5T+ynWxyvkmOQc0bS7VLKYy3Yr/7\nsQtANlCfa77ve7/GVSD1Zk3RZpuN3cdri/441tliQSbAEH8Y/WbheLnwzQubB8be\nL5pHxrarGknfIBrMDa2JDb69GuGLcP1zweOfGnIuG5CKEt014pUE+O8BAoGBAKxp\nHGej0mhLlhtqnD+dmh5a60hkH5rYhGhcFLW9uHSHD+dt3QeKUbA8myKTdjQjBQEM\n699yHkYj+uZ42Q+DUrbhHOwBKupx4X7/1feZ84j72qWuPlSugjETqG7WgQ+BuKyS\n4yQ4I1taaUYwAaGoQqSp8SgWDnITngo+hnTrem1pAoGAObIeduSXQJi/WNzxLB5s\nb7vppZYFj64j7LgNo2q/6jK+HTL5Vc8xp7fuPOu4BaNr3UQFFEYxa3jE0ZPlFawE\nZ+BTCLHVFuxvIb2vIQDUwHtxOPAbSzYUN2W6cPFQ8DWnJMimAuLDkJxS84F+9KzH\nH+xlEFawUtshZHtHkC77fPo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gmail-test-account@datacom-business-1552403590073.iam.gserviceaccount.com",
+  "client_id": "109411433344157592979",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gmail-test-account%40datacom-business-1552403590073.iam.gserviceaccount.com"
+}
