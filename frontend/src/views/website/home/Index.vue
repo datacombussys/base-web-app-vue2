@@ -15,8 +15,7 @@
 
     mixins: [
       LoadSections([
-				// 'hero',
-				'my-elements',
+				'hero',
         'theme-features',
         'features',
         'contact-us',
