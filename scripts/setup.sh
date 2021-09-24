@@ -16,47 +16,74 @@ BRed='\e[1;31m'
 On_Red='\e[41m'
 IRed='\e[0;91m'
 
+echo "You must run the following command: source scripts setup.sh -dev"
+sudo service postgresql start
+sudo service cron start
+
+## Determine if Staging or Production based on install command
+## source ops/install.sh -staging or source ops/install.sh
+SERVER_TYPE=$1
+printf "Server install type is: %s\n" "$SERVER_TYPE"
+
 if [ ! -d ./env ]; then
 	printf "Virtual environment not found, creating it\n"
 	sleep 1
-	virtualenv "./env" -p python3
+	python3 -m venv "./env"
+	printf "Activating virtual environment...\n"
+	source "./env/bin/activate"
+
+	pip3 install --upgrade setuptools pip wheel
+
+else
+	printf "Activating virtual environment...\n"
+	source "./env/bin/activate"
 fi
 
-printf "Activating virtual environment...\n"
-source "./env/bin/activate"
-
 printf "\nInstalling python packages..\n"
-pip3 install -r "./backend/requirements.txt"
+pip install --upgrade -r "./backend/requirements.txt"
+
+echo 'installed python packages'
 
 if [ -d ./frontend ]; then
 	printf "\nInstalling frontend's node packages...\n"
-	npm --prefix ./frontend/ install ./frontend/
+	sudo npm --prefix ./frontend/ install ./frontend/
 	
 	printf "Adding nodeJS modules bin to your path\n"
 	export PATH="`pwd`/frontend/node_modules/.bin/:$PATH"
-	export NODE_ENV="development"
+
+	if [ "$SERVER_TYPE" == '-dev' ]; then
+		echo "setup.sh SERVER_TYPE -dev is executed"
+		export NODE_ENV="development"
+	else
+		echo "setup.sh SERVER_TYPE -prod is executed"
+		export NODE_ENV="production"
+	fi
 fi
+
+if [ ! -d ./frontend/dist ]; then
+	sudo npm --prefix ./frontend/ run build
+fi
+
+echo 'installed frontend modules'
 
 if [ -d ./node ]; then
 	printf "\nInstalling Node's node packages...\n"
-	npm --prefix ./node/ install ./node/
+	sudo npm --prefix ./node/ install ./node/
 	
 	printf "Adding nodeJS modules bin to your path\n"
 	export PATH="`pwd`/node/node_modules/.bin/:$PATH"
-	export NODE_ENV="development"
+
+	if [ "$SERVER_TYPE" == '-dev' ]; then
+		export NODE_ENV="development"
+	else
+		export NODE_ENV="production"
+	fi
 fi
+
+echo 'installed node modules'
 
 printf "Adding scripts folder to your path\n"
 export PATH="`pwd`/scripts/:$PATH"
-
-# if [ -d ./cms ]; then
-# 	printf "\nInstalling CMS node Packages...\n"
-# 	npm --prefix ./cms/ install ./cms/
-	
-# 	printf "Adding nodeJS modules bin to your path\n"
-# 	export PATH="`pwd`/frontend/node_modules/.bin/:$PATH"
-# 	export NODE_ENV="development"
-# fi
 
 if [ ! -f "./backend/project/settings/local_settings.py" ]; then
 	echo -e "$IRed"

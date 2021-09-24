@@ -41,7 +41,7 @@ import NotFound from "@/views/404"
 
 Vue.use(VueRouter)
 
-export const router = new VueRouter({
+const router = new VueRouter({
   mode: 'history',
 	base: process.env.BASE_URL,
 	scrollBehavior: (to, from, savedPosition) => {
@@ -53,35 +53,35 @@ export const router = new VueRouter({
   routes: [
 		{
       path: '/',
-      component: () => import('@/layouts/home/Index.vue'),
+      component: () => import('@/layouts/website/Index.vue'),
       children: [
         {
           path: '',
           name: 'Home',
-          component: () => import('@/views/home/Index.vue'),
+          component: () => import('@/views/website/home/Index.vue'),
         },
         {
           path: 'about',
           name: 'About',
-          component: () => import('@/views/about/Index.vue'),
+          component: () => import('@/views/website/about/Index.vue'),
           meta: { src: require('@/assets/static/web/about.jpg') },
         },
         {
           path: 'contact-us',
           name: 'Contact',
-          component: () => import('@/views/contact-us/Index.vue'),
+          component: () => import('@/views/website/contact-us/Index.vue'),
           meta: { src: require('@/assets/static/web/contact.jpg') },
         },
         {
           path: 'pro',
           name: 'Pro',
-          component: () => import('@/views/pro/Index.vue'),
+          component: () => import('@/views/website/pro/Index.vue'),
           meta: { src: require('@/assets/static/web/pro.jpg') },
         },
         {
           path: '*',
           name: 'FourOhFour',
-          component: () => import('@/views/404/Index.vue'),
+          component: () => import('@/views/website/404/Index.vue'),
         },
       ],
     },
@@ -209,7 +209,9 @@ router.beforeEach(async (to, from, next) => {
 	} else {
 		next() // make sure to always call next()!
 	}
-})
+});
+
+export default router;
 
 
 

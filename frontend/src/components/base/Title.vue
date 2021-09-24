@@ -1,6 +1,6 @@
 <script>
   import Heading from './Heading'
-  import Header from '@/mixins/heading'
+  import Header from '@/mixins/components/heading'
 
   export default {
     name: 'BaseTitle',

@@ -41,16 +41,11 @@ INSTALLED_APPS = [
     #3rd Party Modules
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_registration',
     'django_extensions',
     'storages',
     'django_filters',
 
     #My Modules
-    'blog',
-		'employees',
-		'merchants',
-		'superusers',
     'users',
 
 ]
@@ -138,6 +133,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -155,13 +152,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-REST_REGISTRATION = {
-    'REGISTER_VERIFICATION_ENABLED': False,
-    'RESET_PASSWORD_VERIFICATION_URL': 'https://frontend-url/reset-password/',
-    'REGISTER_EMAIL_VERIFICATION_ENABLED': False,
-    'VERIFICATION_FROM_EMAIL': 'no-reply@example.com',
-}
 
 try:
     from .local_settings import *

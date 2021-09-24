@@ -1,0 +1,19 @@
+[Unit]
+Description={{ DOMAIN }}
+After=network.target
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+EnvironmentFile=/root/secrets.sh
+ExecStart=/usr/bin/env node /var/www/{{ SITE_NAME }}/node/bin/www
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-service
+
+[Install]
+WantedBy=multi-user.target

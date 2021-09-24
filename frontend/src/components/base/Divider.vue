@@ -12,7 +12,7 @@
 
 <script>
   // Mixins
-  import Heading from '@/mixins/heading'
+  import Heading from '@/mixins/components/heading'
 
   export default {
     name: 'BaseDivider',

@@ -1,458 +1,133 @@
 @import "@/assets/scss/variables.scss";
-.dx-viewport {
-	width: 100vw;
-	max-width: 100vw;
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100%;
+	height: 100%;
 }
 
 html,
 body {
 	margin: 0px;
-	font-family: 'Open Sans', sans-serif;
+	min-height: 100%;
+	height: 100%;
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
 	scrollbar-width: thin;
 	overflow-y: auto;
-	overflow-x: hidden;
-	
 	#app {
-		font-family: 'Open Sans Regular', sans-serif;
-		font-size: $base-font-size;
-		line-height: $base-line-height;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		color: #2c3e50;
+		color: $dark;
 		min-height: 100%;
 		height: 100%;
 		width: 100%;
-		
-		text-align: left;
 		.page-container {
-			min-height: calc(100.1vh - 160px);
+			min-height: 100%;
+			height: 100%;
 		}
 	}
 }
-::-webkit-scrollbar {
-	width: 10px;
-	height: 20%; 
-}
-::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 0, 0, 0.2);
-	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); 
-	border-radius: 1ex;
-}
-::-webkit-scrollbar-corner {
-	background: #000;
-}
-section {
-	padding-top: 0px;
-}
-#root {
-  min-height: 100%;
-	height: 100%;
-	font-family: 'Open Sans', sans-serif;
-}
-.page-block {
-	padding: 10px 20px;
-}
-.container {
-	margin: 10px 25px;
-}
-.narrow-container {
-	margin: 15px 75px;
-}
+
+// Headings
 h1 {
-	font-size: $base-font-size * 3;
-	line-height: $base-font-size*2.5;
+	font-size: $font-size * 3;
+	line-height: $line-height;
 }
 h2 {
-	font-size: $base-font-size * 2;
-	line-height: $base-font-size*2.25;
+	font-size: $font-size * 2;
+	line-height: $line-height;
 }
 h3 {
-	font-size: $base-font-size * 1.5;
-	line-height: $base-font-size*2;
+	font-size: $font-size * 1.5;
+	line-height: $line-height;
 }
-.v-application p {
-	font-size: $base-font-size;
-	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 3px;
-}
+
+//Lists
 ul {
 	li {
-		font-size: $base-font-size;
-		font-family: 'Open Sans', sans-serif;
+		font-size: $font-size;
+		font-family: $font-family;
 		font-weight: 500;
 	}
+}
+
+//Titles and Headers
+.headline {
+	display: block;
+	font-size: $font-size*1.4;
+	font-family: $title-family;
 }
 .headline-1 {
 	display: block;
-	font-size: $base-font-size*2;
-	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size*2;
+	font-family: $title-family;
 }
 .headline-2 {
 	display: block;
-	font-size: $base-font-size*1.8;
-	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size*1.8;
+	font-family: $title-family;
 }
 .headline-3 {
 	display: block;
-	font-size: $base-font-size*1.6;
-	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size*1.6;
+	font-family: $title-family;
 }
 .headline-4 {
 	display: block;
-	font-size: $base-font-size*1.4;
-	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size*1.4;
+	font-family: $title-family;
 }
 .headline-5 {
-	width: 100%;
 	display: block;
-	font-size: $base-font-size*1.2;
-	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size*1.2;
+	font-family: $title-family;
 }
 .headline-6 {
 	display: block;
-	font-size: $base-font-size*1;
-	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size*1;
+	font-family: $title-family;
 }
-.v-application .title {
+.title {
 	display: block;
 	width: 100%;
-	font-size: $base-font-size*1.35!important;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	p {
-		margin: 0px;
-	};
+	font-size: $title-size;
+	font-family: $title-family;
+	font-weight: 300;
 }
-
 .subtitle {
 	display: block;
 	width: 100%;
-	font-size: $base-font-size*1.15;
-	font-family: 'Open Sans', sans-serif;
+	font-size: $subtitle-size;
+	font-family: $subtitle-family;
 	font-weight: 400;
 }
-.display-1 {
+
+.header{
 	display: block;
-	font-size: $base-font-size*2;
-	font-family: 'Open Sans', sans-serif;
-}
-.header {
-	display: block;
-	font-size: $base-font-size*1.4;
-	color: rgba(0, 0, 0, 0.7);
-	background: rgba(8, 8, 8, 0.05);
-	border-radius: $border-radius $border-radius 0 0;
-	font-family: 'Abel', sans-serif;
-	border-bottom: rgba(0, 36, 95, 0.3) solid 3px;
 	width: 100%;
-	margin-bottom: 20px;
-	font-weight: 600;
-}
-.divider {
-	border: 1px solid rgba(3, 3, 3, 0.1);
-	margin: 10px 0px;
-	width: 100%
-}
-//Missing Tailwind Items
-.border-1 {
-	border-width: 1px;
-}
-.border-3 {
-	border-width: 3px;
-}
-// *************************************** Reset Vuetify Styles *****************************************//
+	font-size: $header-size;
+	font-family: $header-family;
+	font-weight: 300;
 
-//Remove Box Shadow from v-stepper
-.v-stepper,.v-stepper__header {
-	&.no-box-shadow {
-		box-shadow:	none;
-	}
 }
-
-// *************************************** Navigation Drawer *****************************************//
-//Active router Links for Navigation Drawer
-.v-navigation-drawer {
-	.v-navigation-drawer__content {
-		div {
-			.v-list {
-				a {
-					.v-list-item {
-						.v-list-item__content {
-							padding: 0px;
-							.v-list-item__title {
-								font-size: $base-font-size*1.1;
-								font-family: 'Montserrat', sans-serif;
-								font-weight: 300;
-								line-height: $base-line-height;
-							} 
-						}
-					}
-				}
-				.router-link-exact-active {
-					.v-list-item {
-						background: rgba(5, 5, 5, .5);
-						.v-list-item__icon {
-							.v-icon {
-								color: lighten($warning-color, 20%);
-							}
-							
-						}
-						.v-list-item__content {
-							color: lighten($warning-color, 20%);
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-
-// *************************************** Rows and Columns *****************************************//
-.row {
-	display: flex;
-	flex-direction: row;
-	width:100%;
-  margin-right: 0px;
-  margin-left: 0px;
-	.col-100p {
-    width: 100%;
-		display: flex;
-		flex-direction: row;
-	}
-	.col-95p {
-    width: 95%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-90p {
-    width: 90%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-75p {
-    width: 75%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-50p {
-    width: 50%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-40p {
-    width: 40%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-33p {
-    width: 33%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-25p {
-    width: 25%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-20p {
-    width: 20%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-10p {
-    width: 10%;
-		display: flex;
-		flex-direction: column;
-	}
-	.col-5p{
-    width: 5%;
-		display: flex;
-		flex-direction: column;
-	}
-}
-.col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-auto,.col-lg,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-auto,.col-md,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md-auto,.col-sm,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-auto{
-  width:100%;
-  padding:0px 12px;
-}
-
-// *************************************** Error Field *****************************************//
-
-.errorField {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100px;
-	width: 95%;
-	font-size: $base-font-size*2;
-	font-family: OpenSans Light;
-	background: rgba(187, 187, 187, 0.15);
-	text-align:center;
-	border: 2px solid rgba(14, 13, 13, 0.3);
-	margin: 15px;
-	box-shadow: 5px 5px 5px rgba(199, 199, 199, 0.8);
-}
-
-// *************************************** Material Design *****************************************//
-//MD Cards
-.v-card {
-	border: 1px solid rgba(3, 3, 3, 0.3);
-	background: white;
-	border-radius: 5px;
-	.v-card__title{
-		border-top: 1px solid rgba(3, 3, 3, 0.3);
-		border-bottom: 1px solid rgba(3, 3, 3, 0.3);
-		padding-bottom: 10px;
-		margin-bottom: 20px;
-
-	}
-	.spacing {
-		justify-content: space-evenly;
-	}
-	.v-card__subtitle{
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 500;
-		
-	}
-}
-.compact-card {
-	
-	.v-card__title{
-		border-bottom: 2px solid rgba(3, 3, 3, 0.4);
-		padding: 5px 10px;
-		margin: 0px 0px 20px 0px;
-		background: lighten($base-header-color, 30%);
-	}
-	.v-card__subtitle{
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 500;
-	}
-}
-
-.offset-header-buttons {
+.subheader {
 	display: block;
-	position: absolute;
-	right: 0;
-	top: 40px;
-}
-
-// *************************************** Numeric Counter *****************************************//
-.vue-numeric-input {
-	border: solid rgba(24, 24, 24, 0.3) 1px;
-	.btn {
-		.btn-icon {
-			background: gray;
-			border: solid rgba(0, 0, 0, 0.5) 1px;
-		}
-		
-	}
-	input {
-		height: 40px;
-	}
-}
-
-// *************************************** Vuetify Table *****************************************//
-.v-data-table {
-	.v-data-table__wrapper {
-		table {
-			thead {
-				tr {
-					th {
-						span {
-							font-size:$base-font-size*0.9;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-// *************************************** Vuetify General *****************************************//
-.md-menu-content{
-	background: white;
-}
-
-// *************************************** Custom *****************************************//
-.dashboard-number {
-	width: 200px;
-	height: 100px;
-	background: rgb(214, 241, 250);
-	font-size: 2.25em;
-	font-weight: 400;
-	text-align: center;
-	padding: 40px 10px;
-	border: rgba(0, 0, 0, 0.3) solid 2px;
-}
-
-// *************************************** Barcode Fonts *****************************************//
-.ean-font {
-	font-family: 'EAN-13';
-	font-size: 3.5rem;
-}
-.upc-font {
-	font-family: 'Libre Barcode 128', cursive;
-	font-size: 2rem;
-}
-.sku-font {
-	font-family: 'Libre Barcode 39', cursive;
-	font-size: 2rem;
-}
-.isbn-font {
-	font-family: 'Libre Barcode 128 Text', cursive;
-	font-size: 2rem;
-}
-
-// *************************************** Form Field layout *****************************************//
-
-.field-title {
-	padding: 0px 10px 3px 0px;
-	font-family: 'Work Sans', sans-serif;
-	font-size: $base-font-size*0.9;
-	font-weight: 400;
-	text-align: left;
-}
-.field-content {
-	padding: 0px 10px;
-	text-align: left;
 	width: 100%;
-}
+	font-size: $subheader-size;
+	font-family: $subheader-family;
+	font-weight: 400;
 
-
-// *************************************** Ratings *****************************************//
-.v-rating .v-icon {
-	padding: 0px 0px;
-}
-// *************************************** HTML Editor WYSIWYG *****************************************//
-.dx-htmleditor-content img {
-	vertical-align: middle;
-	padding-right: 10px;
-}
-
-.options {
-	padding: 20px;
-	background-color: rgba(191, 191, 191, 0.15);
-	margin-top: 20px;
-}
-
-.caption {
-	font-size: 18px;
-	font-weight: 500;
-}
-
-.option {
-	margin-top: 10px;
-}
-// *************************************** V-Tabs *****************************************//
-.v-tabs-items {
-	margin-top: 15px;
 }
 
 
 
 
-// *************************************** Dev Express *****************************************//
+// *************************************** Icons *****************************************//
 
-/* ************************************ Input Fields **************************************/
-.dx-texteditor.dx-editor-filled {
-	border: 2px solid transparent;
-}
+
+// *************************************** Vuetify *****************************************//

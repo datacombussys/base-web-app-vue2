@@ -1,5 +1,9 @@
 // Automatically included in './src/main.js'
 
-import './base'
+// Components
+import './components/base'
+import './components/elements'
+
+// Other Plugins
 import './meta'
 import './webfontloader'
